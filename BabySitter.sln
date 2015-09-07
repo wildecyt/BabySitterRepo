@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BabySitter", "BabySitter\BabySitter.csproj", "{F4340E6F-D30C-4242-93C6-5E2470DBD1E2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BabySitter.Api", "BabySitter\BabySitter.Api.csproj", "{F4340E6F-D30C-4242-93C6-5E2470DBD1E2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BabySitter.Tests", "BabySitter.Tests\BabySitter.Tests.csproj", "{16BB11E3-6DE0-4620-A98A-45DCE1F9C62F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BabySitter.Service", "BabySitter.Service\BabySitter.Service.csproj", "{75FD9DD7-4A9A-4BAC-AF8C-6910E51DB79A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BabySitter.Data", "BabySitter.Data\BabySitter.Data.csproj", "{4D96E9D2-F3FF-4E1C-A016-E31E25946E72}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{16BB11E3-6DE0-4620-A98A-45DCE1F9C62F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16BB11E3-6DE0-4620-A98A-45DCE1F9C62F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16BB11E3-6DE0-4620-A98A-45DCE1F9C62F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75FD9DD7-4A9A-4BAC-AF8C-6910E51DB79A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75FD9DD7-4A9A-4BAC-AF8C-6910E51DB79A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75FD9DD7-4A9A-4BAC-AF8C-6910E51DB79A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75FD9DD7-4A9A-4BAC-AF8C-6910E51DB79A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D96E9D2-F3FF-4E1C-A016-E31E25946E72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D96E9D2-F3FF-4E1C-A016-E31E25946E72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D96E9D2-F3FF-4E1C-A016-E31E25946E72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D96E9D2-F3FF-4E1C-A016-E31E25946E72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

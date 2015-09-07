@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using System.Web.Http.Results;
 using BabySitter.Api.Controllers;
 using BabySitter.Api.Controllers.Interfaces;
-using BabySitter.Api.Models.Interfaces;
+using BabySitter.Data.Models.Interfaces;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace BabySitter.Tests

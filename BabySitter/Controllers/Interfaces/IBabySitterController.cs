@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using System.Web.Http;
 
-namespace BabySitter.Controllers.Interfaces
+namespace BabySitter.Api.Controllers.Interfaces
 {
     public interface IBabySitterController
     {

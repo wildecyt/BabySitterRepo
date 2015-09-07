@@ -1,9 +1,10 @@
 ﻿using System;
 
-namespace BabySitter.Models.Interfaces
+namespace BabySitter.Data.Models.Interfaces
 {
     public interface IBabySitter
     {
+        int Id { get; set; }
         DateTime StartTime { get; set; }
         DateTime EndTime { get; set; }
     }

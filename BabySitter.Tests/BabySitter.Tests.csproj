@@ -71,6 +71,14 @@
     <Compile Include="BabySitterWebApiTest.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BabySitter.Data\BabySitter.Data.csproj">
+      <Project>{4d96e9d2-f3ff-4e1c-a016-e31e25946e72}</Project>
+      <Name>BabySitter.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BabySitter.Service\BabySitter.Service.csproj">
+      <Project>{75fd9dd7-4a9a-4bac-af8c-6910e51db79a}</Project>
+      <Name>BabySitter.Service</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BabySitter\BabySitter.Api.csproj">
       <Project>{F4340E6F-D30C-4242-93C6-5E2470DBD1E2}</Project>
       <Name>BabySitter.Api</Name>
