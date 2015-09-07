@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Web.Http.Results;
-using BabySitter.Controllers;
-using BabySitter.Controllers.Interfaces;
-using BabySitter.Models.Interfaces;
+using BabySitter.Api.Controllers;
+using BabySitter.Api.Controllers.Interfaces;
+using BabySitter.Api.Models.Interfaces;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace BabySitter.Tests
@@ -35,7 +35,7 @@ namespace BabySitter.Tests
             OkNegotiatedContentResult<IBabySitter> result = await BabySitterController.Get(1) as OkNegotiatedContentResult<IBabySitter>;
 
             Assert.IsNotNull(result);
-            Assert.IsTrue(result.Content.StartTime < StartTime , "starts no earlier than 5:00PM");
+            Assert.IsTrue(result.Content.StartTime <= StartTime , "starts no earlier than 5:00PM");
         }
 
         [TestMethod]
@@ -44,7 +44,7 @@ namespace BabySitter.Tests
             OkNegotiatedContentResult<IBabySitter> result = await BabySitterController.Get(1) as OkNegotiatedContentResult<IBabySitter>;
 
             Assert.IsNotNull(result);
-            Assert.IsTrue(result.Content.EndTime < EndTime, "leaves no later than 4:00AM");
+            Assert.IsTrue(result.Content.EndTime <= EndTime, "leaves no later than 4:00AM");
         }
     }
 }

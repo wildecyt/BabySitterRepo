@@ -71,9 +71,9 @@
     <Compile Include="BabySitterWebApiTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BabySitter\BabySitter.csproj">
+    <ProjectReference Include="..\BabySitter\BabySitter.Api.csproj">
       <Project>{F4340E6F-D30C-4242-93C6-5E2470DBD1E2}</Project>
-      <Name>BabySitter</Name>
+      <Name>BabySitter.Api</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
