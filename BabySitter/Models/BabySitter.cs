@@ -6,5 +6,7 @@ namespace BabySitter.Models
     public class BabySitter : IBabySitter
     {
         public DateTime StartTime { get; set; }
+
+        public DateTime EndTime { get; set; }
     }
 }

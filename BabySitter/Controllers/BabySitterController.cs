@@ -10,7 +10,11 @@ namespace BabySitter.Controllers
     {
         private IHttpActionResult GetBabySitter(int id)
         {
-            return Ok<IBabySitter>(new Models.BabySitter {StartTime = DateTime.Now});
+            return Ok<IBabySitter>(new Models.BabySitter
+                                   {
+                                       StartTime = DateTime.Parse("5:00PM"),
+                                       EndTime = DateTime.Parse("4:00AM")
+            });
         }
 
         // GET api/<controller>/5

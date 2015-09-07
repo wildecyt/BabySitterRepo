@@ -13,12 +13,20 @@ namespace BabySitter.Tests
     {
         private IBabySitterController BabySitterController { get; set; }
         private DateTime StartTime { get; set; }
-
+        private DateTime EndTime { get; set; }
+        
         [TestInitialize]
         public void Initialize()
         {
             BabySitterController = new BabySitterController();
-            StartTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 17, 0, 0);
+            StartTime = DateTime.Parse("5:00PM");
+            EndTime =new DateTime(StartTime.Year, StartTime.Month, StartTime.Day + 1, 4, 0, 0);
+        }
+
+        [TestMethod]
+        public void ValidateWorkHours()
+        {
+            Assert.IsTrue(StartTime < EndTime, "StartTime < EndTime");
         }
 
         [TestMethod]
@@ -27,7 +35,16 @@ namespace BabySitter.Tests
             OkNegotiatedContentResult<IBabySitter> result = await BabySitterController.Get(1) as OkNegotiatedContentResult<IBabySitter>;
 
             Assert.IsNotNull(result);
-            Assert.IsFalse(result.Content.StartTime > StartTime, "starts no earlier than 5:00PM");
+            Assert.IsTrue(result.Content.StartTime < StartTime , "starts no earlier than 5:00PM");
+        }
+
+        [TestMethod]
+        public async Task ValidateEndTime()
+        {
+            OkNegotiatedContentResult<IBabySitter> result = await BabySitterController.Get(1) as OkNegotiatedContentResult<IBabySitter>;
+
+            Assert.IsNotNull(result);
+            Assert.IsTrue(result.Content.EndTime < EndTime, "leaves no later than 4:00AM");
         }
     }
 }
